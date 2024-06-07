@@ -7,7 +7,7 @@
 
 ---
 
-### Motivation
+## Motivation
 
 Our motivation to develop a game app centered on the life of polar bears stems from a deep-rooted fascination with these majestic creatures, inspired by numerous documentaries and literary works that delve into the transformative experiences of humans morphing into animals. This unique perspective has ignited a passion in us to create an immersive environment where gamers can step into the paws of polar bears, experiencing their daily struggles and joys firsthand.
 
@@ -15,32 +15,32 @@ Through this game, we aim to bridge the gap between human understanding and anim
 
 Moreover, this project is an opportunity to raise awareness about the impact of climate change on polar bear populations and their shrinking ice habitats. By simulating the life of polar bears, we hope to inspire players to take actionable steps toward environmental conservation and to appreciate the intricate balance of our ecosystem. This game is not just a source of entertainment but a call to action, a blend of education, empathy, and engagement with the natural world.
 
-### Vision
+## Vision
 
 Polar Bear Simulator will be a single-player PC RPG game set in the frozen continent of Antarctica, with a 3D 32-bit low poly art style. Polar Bear Simulator’s gameplay will be inspired by classics like Travel Frogs and QQ Farm, played from a top-down camera view. Specific game features are elaborated in the following sections.
 
 We aim to provide an immersive experience of a polar bear’s daily life, showcasing their habits and the challenges they face. By navigating these challenges, players will uncover the root cause—environmental damage caused by human behavior. Through this journey, we hope to raise awareness and encourage efforts to protect the environment.
 
-## Realistic Hunting Mechanics
+### Realistic Hunting Mechanics
 
 The game simulates the hunting behavior of polar bears in great detail, allowing players to stalk and ambush seals, fish, and other Arctic wildlife. Techniques like camouflaging in the snow, using wind direction to avoid alerting prey, and initiating swift attacks are crucial gameplay elements. The game also incorporates a stamina system that depletes during chases, adding a layer of challenge and realism.
 
 
-## Swimming and Diving
+### Swimming and Diving
 
 Players can explore extensive underwater environments reflective of the Arctic ocean. The swimming mechanics are designed to mimic the powerful, yet graceful movements of a polar bear. Aspects such as managing breath while diving, navigating through icy waters, and hunting underwater prey are integrated to enhance the immersive experience. The game might also feature challenges like strong currents and ice blockades.
 
 
-## Hibernation Cycle
+### Hibernation Cycle
 
 This feature focuses on the preparation for and the process of hibernation. Players must effectively manage their food intake and fat reserves before winter arrives. The game simulates the gradual decrease in bear activity and the need for a secure and insulated den. During hibernation, the game could present mini-challenges or decision-making scenarios that affect the bear's condition upon awakening.
 
 
-## Survival Elements
+### Survival Elements
 
 In addition to hunting and hibernation, players must navigate various survival challenges like avoiding predators such as wolves, facing human encroachments, and dealing with environmental hazards (e.g., melting ice caps and oil spills). The game could include a dynamic weather system where sudden snowstorms or blizzards require finding shelter or facing dire consequences.
 
-## Environmental Interaction
+### Environmental Interaction
 
 The game’s environment is interactive and changes with the seasons. Players can manipulate objects in the world, such as breaking ice to create hunting paths or using the terrain to hide from threats. Seasonal changes affect gameplay, with varying day lengths and temperatures influencing the game's strategy and pacing.
 
@@ -53,14 +53,14 @@ Our goal for "Polar Bear Simulator" is to deliver an authentic and immersive sim
 
 
 
-### Storyline
+## Storyline
 
-## Setting
+### Setting
 
 The game is set in a vast and unforgiving Arctic landscape known as Glacial Bay, a region teeming with wildlife and harsh natural challenges. Central to Glacial Bay is the mystical Aurora Peak, a towering glacier rumored to be the source of ancient polar bear wisdom. The region is split into various zones, each home to distinct ecosystems and challenges, reflecting the polar bear's struggle against climate change and shrinking habitats.
 
 
-## Plot
+### Plot
 
 The protagonist of "Polar Bear Simulator" is Taotao, a young polar bear who has been separated from his family after an unprecedented ice melt. Taotao is intuitive, resilient, and fiercely independent, yet haunted by fragmented memories of his family and the rich heritage of his species. His journey is about survival, discovery, and the quest to reunite with his family.
 
@@ -111,9 +111,9 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 - **As a conservationist** striving to raise awareness about the plight of polar bears, I want to be able to incorporate the game into our campaigns and outreach programs, using it as a medium to educate the public about the challenges polar bears face and encourage them to take action towards conservation efforts.
 
 
-### Scope
+## Scope
 
-## Core Features:
+### Core Features:
 
 1. **Character Control:** Players will control Taotao, a young polar bear, and navigate him through various challenges and environments.
 2. **Hunting Mechanics:** The game will feature realistic hunting mechanics, allowing players to stalk and capture prey.
@@ -122,7 +122,7 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 5. **Hibernation Cycle:** Players will need to manage food intake and find a secure den for hibernation.
 6. **Environmental Interaction:** The game will feature an interactive environment that changes with the seasons.
 
-## Educational Content:
+### Educational Content:
 
 1. **Fact Pop-ups:** Throughout the game, players will encounter educational facts about polar bears and their habitat.
 2. **Interactive Documentaries:** The game will include short documentaries accessible from the game menu, providing in-depth information about polar bears and the impact of climate change.
@@ -151,18 +151,15 @@ While NPCs will have basic behaviors, advanced AI that allows for complex intera
 
 Although some customization options for Taotao and the environment could enhance player engagement, extensive customization options are not within the current scope due to the additional development time and resources required.
 
-### Mobile Platform:
-
-While a mobile version of the game could expand its reach, the initial development will focus on a PC release due to the limitations and challenges of developing for multiple platforms simultaneously.
 
 
-### Project Timeline
+## Project Timeline
 
 ![Glacial Bay](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/b2fe83e7-f1e2-4cf5-83c6-2c582004c4b2)
 
 
 
-### Conclusion
+## Conclusion
 
 "Polar Bear Simulator" aims to combine engaging gameplay with educational content to provide an immersive experience that raises awareness about the challenges faced by polar bears due to climate change. Through detailed mechanics, a compelling storyline, and interactive environments, players will gain a deeper understanding of polar bears' lives and the importance of conservation efforts.
 
