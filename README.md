@@ -1,10 +1,11 @@
 # HF_er-Orbital
 
-**The Polar Bear Simulator | 23/24 orbital project | Apollo level**
+***The Polar Bear Simulator | 23/24 orbital project | Apollo level***
 
 **Team Name:** HF_er  
 **Proposed Level of Achievement:** Apollo
 
+---
 
 ### Motivation
 
