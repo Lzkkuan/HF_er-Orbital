@@ -19,6 +19,8 @@ Moreover, this project is an opportunity to raise awareness about the impact of 
 
 Polar Bear Simulator will be a single-player PC RPG game set in the frozen continent of Antarctica, with a 3D 32-bit low poly art style. Polar Bear Simulator’s gameplay will be inspired by classics like Travel Frogs and QQ Farm, played from a top-down camera view. Specific game features are elaborated in the following sections.
 
+![Glacial Bay](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/7de39dc9-ba75-4733-88e8-0a58844fe360)
+
 We aim to provide an immersive experience of a polar bear’s daily life, showcasing their habits and the challenges they face. By navigating these challenges, players will uncover the root cause—environmental damage caused by human behavior. Through this journey, we hope to raise awareness and encourage efforts to protect the environment.
 
 ### Realistic Hunting Mechanics
