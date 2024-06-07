@@ -121,6 +121,7 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 4. **Survival Elements:** The game will include survival challenges such as avoiding predators and dealing with environmental hazards.
 5. **Hibernation Cycle:** Players will need to manage food intake and find a secure den for hibernation.
 6. **Environmental Interaction:** The game will feature an interactive environment that changes with the seasons.
+7. **Extensive Customization Options:** Some customization options for Taotao and the environment would be developed to enhance player engagement
 
 ### Educational Content:
 
@@ -146,11 +147,6 @@ While a multiplayer mode where players can interact and cooperate or compete wit
 ### Advanced AI for NPCs:
 
 While NPCs will have basic behaviors, advanced AI that allows for complex interactions and dynamic responses to player actions is not within the current scope.
-
-### Extensive Customization Options:
-
-Although some customization options for Taotao and the environment could enhance player engagement, extensive customization options are not within the current scope due to the additional development time and resources required.
-
 
 
 ## Project Timeline
