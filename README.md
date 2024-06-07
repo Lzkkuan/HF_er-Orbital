@@ -5,6 +5,8 @@
 **Team Name:** HF_er  
 **Proposed Level of Achievement:** Apollo
 
+---
+
 ## Motivation
 
 Our motivation to develop a game app centered on the life of polar bears stems from a deep-rooted fascination with these majestic creatures, inspired by numerous documentaries and literary works that delve into the transformative experiences of humans morphing into animals. This unique perspective has ignited a passion in us to create an immersive environment where gamers can step into the paws of polar bears, experiencing their daily struggles and joys firsthand.
@@ -13,31 +15,45 @@ Through this game, we aim to bridge the gap between human understanding and anim
 
 Moreover, this project is an opportunity to raise awareness about the impact of climate change on polar bear populations and their shrinking ice habitats. By simulating the life of polar bears, we hope to inspire players to take actionable steps toward environmental conservation and to appreciate the intricate balance of our ecosystem. This game is not just a source of entertainment but a call to action, a blend of education, empathy, and engagement with the natural world.
 
+---
+
 ## Vision
 
 Polar Bear Simulator will be a single-player PC RPG game set in the frozen continent of Antarctica, with a 3D 32-bit low poly art style. Polar Bear Simulator’s gameplay will be inspired by classics like Travel Frogs and QQ Farm, played from a top-down camera view. Specific game features are elaborated in the following sections.
 
 We aim to provide an immersive experience of a polar bear’s daily life, showcasing their habits and the challenges they face. By navigating these challenges, players will uncover the root cause—environmental damage caused by human behavior. Through this journey, we hope to raise awareness and encourage efforts to protect the environment.
 
+---
+
 ### Realistic Hunting Mechanics
 
 The game simulates the hunting behavior of polar bears in great detail, allowing players to stalk and ambush seals, fish, and other Arctic wildlife. Techniques like camouflaging in the snow, using wind direction to avoid alerting prey, and initiating swift attacks are crucial gameplay elements. The game also incorporates a stamina system that depletes during chases, adding a layer of challenge and realism.
+
+---
 
 ### Swimming and Diving
 
 Players can explore extensive underwater environments reflective of the Arctic ocean. The swimming mechanics are designed to mimic the powerful, yet graceful movements of a polar bear. Aspects such as managing breath while diving, navigating through icy waters, and hunting underwater prey are integrated to enhance the immersive experience. The game might also feature challenges like strong currents and ice blockades.
 
+---
+
 ### Hibernation Cycle
 
 This feature focuses on the preparation for and the process of hibernation. Players must effectively manage their food intake and fat reserves before winter arrives. The game simulates the gradual decrease in bear activity and the need for a secure and insulated den. During hibernation, the game could present mini-challenges or decision-making scenarios that affect the bear's condition upon awakening.
+
+---
 
 ### Survival Elements
 
 In addition to hunting and hibernation, players must navigate various survival challenges like avoiding predators such as wolves, facing human encroachments, and dealing with environmental hazards (e.g., melting ice caps and oil spills). The game could include a dynamic weather system where sudden snowstorms or blizzards require finding shelter or facing dire consequences.
 
+---
+
 ### Environmental Interaction
 
 The game’s environment is interactive and changes with the seasons. Players can manipulate objects in the world, such as breaking ice to create hunting paths or using the terrain to hide from threats. Seasonal changes affect gameplay, with varying day lengths and temperatures influencing the game's strategy and pacing.
+
+---
 
 ### Educational Content
 
@@ -45,7 +61,11 @@ As players engage with the game, they encounter various educational tidbits abou
 
 Our goal for "Polar Bear Simulator" is to deliver an authentic and immersive simulation of the life of a polar bear in the Arctic. We aim to combine engaging gameplay with educational content to captivate and inform players. As we refine the game, our objective is to launch on platforms like Steam, targeting 100 initial downloads without relying on a large advertising budget. Through this game, we hope to foster appreciation and awareness for polar bears and their environmental challenges.
 
+---
+
 ## Storyline
+
+---
 
 ### Setting
 
@@ -53,29 +73,43 @@ The game is set in a vast and unforgiving Arctic landscape known as Glacial Bay,
 
 ![Glacial Bay](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/b2fe83e7-f1e2-4cf5-83c6-2c582004c4b2)
 
+---
+
 ### Plot
 
 The protagonist of "Polar Bear Simulator" is Taotao, a young polar bear who has been separated from his family after an unprecedented ice melt. Taotao is intuitive, resilient, and fiercely independent, yet haunted by fragmented memories of his family and the rich heritage of his species. His journey is about survival, discovery, and the quest to reunite with his family.
+
+---
 
 #### Arc 1: Survival and Learning
 
 The game begins with Taotao learning the basic survival skills of a polar bear—hunting, swimming, and navigating the treacherous ice. Players will learn how to track different prey, fish in open waters, and protect themselves from predators and harsh weather.
 
+---
+
 #### Arc 2: The Disappearing Ice (3 Challenges)
 
 As Taotao adapts to life on his own, he faces challenges mirroring the real-world impact of climate change on polar bears. To survive, Taotao must navigate shrinking ice paths, find new hunting grounds as old ones become inaccessible, and compete with other wildlife for dwindling resources. Yet, Taotao constantly wonders why his home is collapsing, as if some mysterious force is at play. Determined, he seeks to uncover the secret and bring peace to the continent.
+
+---
 
 #### Arc 3: Echoes of the Past
 
 Taotao discovers ancient carvings and signs left by elder bears, leading him to hidden valleys beneath Aurora Peak. Here, he experiences visions from the 'Spirit Realm,' where he sees the majestic life his ancestors led and learns about the ancient wisdom they left behind. These revelations strengthen his resolve to protect his legacy and environment.
 
+---
+
 #### Arc 4: The Reunion
 
 Armed with knowledge and new skills, Taotao finally traces the scent of his family to a secluded part of Glacial Bay. However, the reunion is threatened by a looming disaster—a massive oil spill. Taotao must rally the local wildlife to prevent the catastrophe and save their home.
 
+---
+
 #### Arc 5: The Truth
 
 After battling disasters and saving his home, Taotao discovered that all the calamities were caused by environmental damage inflicted by humans. Though he once sought to bring peace to the continent, he realized that his efforts were futile as long as humans continued their harmful ways. Despite the challenges, he remained in this unforgiving land because it is his home.
+
+---
 
 ### Link to Gameplay and Development
 
@@ -87,15 +121,25 @@ The combat system involves encounters with natural predators and environmental h
 
 At the end of each major arc, a cinematic cutscene ties the accomplishments back to the overarching narrative, emphasizing Taotao's growth and the environmental messages at the heart of the game.
 
+---
+
 ## User Stories
 
 - **As a gamer** looking for fun and relaxation within the game, I want to be able to control a polar bear to hunt, swim, climb snow mountains, court mates, and hibernate, so that I can immerse myself in a challenging and entertaining Arctic world, experiencing a unique natural lifestyle while enjoying my leisure time.
+
 - **As a teacher** who wants to educate students about wildlife conservation and the effects of climate change on species like polar bears, I want to be able to use the game as an interactive teaching tool in my classroom, providing factual information and real-life scenarios that polar bears face, so that students can learn about environmental issues in an engaging and memorable way.
+
 - **As a wildlife enthusiast** who wants to promote awareness and understanding of polar bears and their natural habitat, I want to be able to explore detailed simulations of the Arctic ecosystem, observe the behaviors and challenges of polar bears, and share my experiences and learnings from the game with my community, so as to foster a greater appreciation for wildlife conservation and the impacts of global warming.
-- **As a parent** looking for a fun and educational activity to enjoy with my kids, I want a family game centered around wildlife so that we can bond over learning about the Arctic environment and its inhabitants while enjoying the fun of the game itself.
-- **As a conservation organization** striving to raise awareness about the plight of polar bears, I want to be able to incorporate the game into our campaigns and outreach programs, using it as a medium to educate the public about the challenges polar bears face and encourage them to take action towards conservation efforts.
+
+- **As a parent** looking for a fun and educational activity to enjoy with my kids, I want a family game centered around wildlife so that we can bond over learning about polar bears' lives in an interactive and engaging way. I want the game to provide a safe and enriching experience that sparks our curiosity and fosters a love for nature and animals.
+
+- **As a conservationist** striving to raise awareness about the plight of polar bears, I want to be able to incorporate the game into our campaigns and outreach programs, using it as a medium to educate the public about the challenges polar bears face and encourage them to take action towards conservation efforts.
+
+---
 
 ## Scope
+
+---
 
 ### Core Features:
 
@@ -120,6 +164,8 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 4. **Arc 4: The Reunion:** Taotao will work to reunite with his family and prevent a looming disaster.
 5. **Arc 5: The Truth:** Taotao will discover the root cause of the environmental damage and continue his fight for survival.
 
+---
+
 ## Out of Scope
 
 ### Multiplayer Mode:
@@ -138,74 +184,95 @@ Although some customization options for Taotao and the environment could enhance
 
 While a mobile version of the game could expand its reach, the initial development will focus on a PC release due to the limitations and challenges of developing for multiple platforms simultaneously.
 
+---
+
 ## Wireframe
 
 ![Wireframe](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/ba49f5d3-7304-473d-b21f-c8f4844cf1c4)
 
+---
+
 ## Project Timeline
 
 ### Week 1-2: Research and Planning
+
 - Define the game concept, storyline, and core features.
 - Conduct research on polar bears and their habitat.
 - Create initial sketches and wireframes.
 
 ### Week 3-4: Prototyping and Design
+
 - Develop a basic prototype with placeholder assets.
 - Design the main character (Taotao) and initial environment assets.
 - Plan and storyboard the introductory arc of the game.
 
 ### Week 5-6: Core Mechanics Development
+
 - Implement character control mechanics (movement, hunting, swimming).
 - Develop basic survival elements (energy management, health).
 - Create initial interactive environment features.
 
 ### Week 7-8: Storyline Integration and Expanded Features
+
 - Integrate the first story arc (Survival and Learning) into the game.
 - Expand on core mechanics with additional features (hibernation cycle, environmental hazards).
 - Develop basic NPC behaviors (prey, predators).
 
 ### Week 9-10: Art and Sound Design
+
 - Refine character and environment assets with detailed art and animations.
 - Create sound effects and background music to enhance immersion.
 - Implement weather effects and seasonal changes in the environment.
 
 ### Week 11-12: Testing and Refinement
+
 - Conduct playtesting to identify and fix bugs and balance gameplay.
 - Refine and polish the user interface and overall game experience.
 - Gather feedback and make necessary adjustments to core mechanics and story elements.
 
 ### Week 13-14: Finalization and Launch Preparation
+
 - Finalize all game assets and mechanics.
 - Prepare the game for launch on the chosen platform (e.g., Steam).
 - Develop marketing materials and plan for the initial launch and promotion.
 
 ### Week 15-16: Launch and Post-Launch Support
+
 - Launch the game and monitor player feedback.
 - Provide post-launch support to address any issues and release updates as needed.
 - Evaluate the success of the game and plan for future improvements or expansions.
 
+---
+
 ## Marketing Plan
 
-1. **Social Media Campaign:**
-   - Create social media accounts on platforms like Twitter, Facebook, and Instagram.
-   - Post regular updates on the game's development progress, including screenshots, videos, and behind-the-scenes content.
-   - Engage with the community by responding to comments and messages.
+### Social Media Campaign
 
-2. **Website and Blog:**
-   - Develop a dedicated website for the game with information about the storyline, features, and development process.
-   - Maintain a blog to share updates, developer insights, and educational content about polar bears and climate change.
+- Create social media accounts on platforms like Twitter, Facebook, and Instagram.
+- Post regular updates on the game's development progress, including screenshots, videos, and behind-the-scenes content.
+- Engage with the community by responding to comments and messages.
 
-3. **Press and Influencer Outreach:**
-   - Reach out to gaming websites, blogs, and influencers to request coverage and reviews of the game.
-   - Provide press kits with detailed information, high-quality images, and demo access to the game.
+### Website and Blog
 
-4. **Launch Event:**
-   - Host a virtual launch event to celebrate the game's release, featuring live gameplay, Q&A sessions with the developers, and giveaways.
-   - Encourage attendees to share their experiences and spread the word about the game.
+- Develop a dedicated website for the game with information about the storyline, features, and development process.
+- Maintain a blog to share updates, developer insights, and educational content about polar bears and climate change.
 
-5. **Educational Partnerships:**
-   - Partner with schools, conservation organizations, and wildlife enthusiasts to promote the game as an educational tool.
-   - Offer special discounts or free copies to educators and conservation groups to encourage its use in classrooms and awareness campaigns.
+### Press and Influencer Outreach
+
+- Reach out to gaming websites, blogs, and influencers to request coverage and reviews of the game.
+- Provide press kits with detailed information, high-quality images, and demo access to the game.
+
+### Launch Event
+
+- Host a virtual launch event to celebrate the game's release, featuring live gameplay, Q&A sessions with the developers, and giveaways.
+- Encourage attendees to share their experiences and spread the word about the game.
+
+### Educational Partnerships
+
+- Partner with schools, conservation organizations, and wildlife enthusiasts to promote the game as an educational tool.
+- Offer special discounts or free copies to educators and conservation groups to encourage its use in classrooms and awareness campaigns.
+
+---
 
 ## Conclusion
 
