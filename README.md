@@ -15,11 +15,35 @@ Through this game, we aim to bridge the gap between human understanding and anim
 
 Moreover, this project is an opportunity to raise awareness about the impact of climate change on polar bear populations and their shrinking ice habitats. By simulating the life of polar bears, we hope to inspire players to take actionable steps toward environmental conservation and to appreciate the intricate balance of our ecosystem. This game is not just a source of entertainment but a call to action, a blend of education, empathy, and engagement with the natural world.
 
+## Design Decisions and Trade-offs
+
+During the development of the Polar Bear Simulator, we encountered several design decisions that required careful consideration and trade-offs:
+
+### 2D-pixel Art Style vs. 3D Graphics:
+- **Decision:** We chose a 2D-pixel art style.
+- **Alternatives:** Using 3D graphics could provide a more realistic experience.
+- **Criteria:** The simplicity and nostalgia of 2D-pixel art, easier implementation, and better performance on a wider range of PCs.
+- **Justification:** The 2D-pixel art style aligns with our vision of a classic, engaging game, and ensures broader accessibility.
+
+### Single-Player vs. Multiplayer:
+- **Decision:** We focused on a single-player experience.
+- **Alternatives:** Implementing multiplayer could add social interaction.
+- **Criteria:** Development complexity, resource constraints, and the narrative-driven gameplay.
+- **Justification:** A single-player game allows us to craft a more controlled and immersive narrative, enhancing the educational aspect of the game.
+
+### Top-Down Camera View vs. Side-Scrolling View:
+- **Decision:** We chose a top-down camera view.
+- **Alternatives:** Side-scrolling could offer a different gameplay perspective.
+- **Criteria:** Gameplay mechanics, environmental interaction, and player immersion.
+- **Justification:** The top-down view supports better navigation and interaction with the environment, making the game more intuitive and immersive.
+
+These decisions were made to ensure that the game meets our goals of providing an engaging, educational, and accessible experience for players.
+
 ## Vision
 
-Polar Bear Simulator will be a single-player PC RPG game set in the frozen continent of Antarctica, with a 3D 32-bit low poly art style. Polar Bear Simulator’s gameplay will be inspired by classics like Travel Frogs and QQ Farm, played from a top-down camera view. Specific game features are elaborated in the following sections.
+Polar Bear Simulator will be a single-player PC RPG game set in the frozen continent of Antarctica, with a 2D-pixel art style. Polar Bear Simulator’s gameplay will be inspired by classics like Travel Frogs and QQ Farm, played from a top-down camera view. Specific game features are elaborated in the following sections.
 
-![Glacial Bay](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/7de39dc9-ba75-4733-88e8-0a58844fe360)
+
 
 We aim to provide an immersive experience of a polar bear’s daily life, showcasing their habits and the challenges they face. By navigating these challenges, players will uncover the root cause—environmental damage caused by human behavior. Through this journey, we hope to raise awareness and encourage efforts to protect the environment.
 
@@ -115,6 +139,8 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 
 ## Scope
 
+![image](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/f51da58b-609e-4b96-ab8f-53c858a9e4c8)
+
 ### Core Features:
 
 1. **Character Control:** Players will control Taotao, a young polar bear, and navigate him through various challenges and environments.
@@ -124,6 +150,8 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 5. **Hibernation Cycle:** Players will need to manage food intake and find a secure den for hibernation.
 6. **Environmental Interaction:** The game will feature an interactive environment that changes with the seasons.
 7. **Extensive Customization Options:** Some customization options for Taotao and the environment would be developed to enhance player engagement
+
+![image](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/ee2e5632-4ec9-4e2a-9b3e-2a0d821ce7cb)
 
 ### Educational Content:
 
@@ -139,6 +167,8 @@ At the end of each major arc, a cinematic cutscene ties the accomplishments back
 4. **Arc 4: The Reunion:** Taotao will work to reunite with his family and prevent a looming disaster.
 5. **Arc 5: The Truth:** Taotao will discover the root cause of the environmental damage and continue his fight for survival.
 
+![image](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/d10a40fd-acf0-49cc-8ad7-092c227e9bb8)
+
 
 ## Out of Scope
 
@@ -150,11 +180,17 @@ While a multiplayer mode where players can interact and cooperate or compete wit
 
 While NPCs will have basic behaviors, advanced AI that allows for complex interactions and dynamic responses to player actions is not within the current scope.
 
+## Tech Stack
+**1. Unity**
+**2. VS2022**
+**3. GitHub Desktop**
+**4. Viddup (for video production)**
+**5. Blender**
+
 
 ## Project Timeline
 
-![Glacial Bay](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/b2fe83e7-f1e2-4cf5-83c6-2c582004c4b2)
-
+![image](https://github.com/Lzkkuan/HF_er-Orbital/assets/141710483/c523ea85-b66c-440c-b969-9990a5e1fc4c)
 
 
 ## Conclusion
@@ -166,7 +202,7 @@ By successfully executing our project plan and marketing strategy, we aim to rea
 ---
 ## Proof-of-Concept 
 
-Refer to video demonstration: https://youtu.be/nyW_ZNkiNvE
+Refer to video demonstration: [https://youtu.be/nyW_ZNkiNvE](https://youtu.be/KaB_lvmZEDk)
 
 ## Work Log 
-Refer to attached spreadsheet: https://docs.google.com/spreadsheets/d/1pACcxsmlLo-XdVxh4lbsJW1tl1wx3HCxwKj1kntpGgo/edit#gid=0
+Refer to the attached spreadsheet: [https://docs.google.com/spreadsheets/d/1pACcxsmlLo-XdVxh4lbsJW1tl1wx3HCxwKj1kntpGgo/edit#gid=0](https://docs.google.com/spreadsheets/d/1pACcxsmlLo-XdVxh4lbsJW1tl1wx3HCxwKj1kntpGgo/edit#gid=0)
