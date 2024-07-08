@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     private Animator animator;
     private SpriteRenderer sr;
+    private Vector2 movementInput;
 
     private void Awake()
     {
@@ -18,14 +19,20 @@ public class PlayerMovement : MonoBehaviour
     {
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
-        HandleMovement(xInput, yInput);
+        movementInput = new Vector2(xInput, yInput).normalized;
         UpdateAnimation(xInput, yInput);
     }
 
-    private void HandleMovement(float xInput, float yInput)
+    private void FixedUpdate()
     {
-        Vector2 movementDirection = new Vector2(xInput, yInput).normalized;
-        rb.velocity = movementDirection * moveSpeed;
+        HandleMovement();
+    }
+
+    private void HandleMovement()
+    {
+        Vector2 currentPosition = rb.position;
+        Vector2 newPosition = currentPosition + movementInput * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(newPosition);
     }
 
     private void UpdateAnimation(float xInput, float yInput)
