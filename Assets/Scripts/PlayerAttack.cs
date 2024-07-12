@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     Vector3 position;
+    private int attackPower;
+    public int knockbackForce;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,16 @@ public class PlayerAttack : MonoBehaviour
         }
     }
     
+    private void OnTriggerEnter2D(Collider2D collider) {
+        Damageable damageable = collider.GetComponent<Damageable>();
+        if (damageable != null) {
+            Vector3 _position = transform.parent.position;
+            Vector2 direction = collider.transform.position - _position;
+
+            attackPower = 1;
+            damageable.OnHit(attackPower, direction * knockbackForce);
+        }
+    }
     void Update()
     {
         
