@@ -17,6 +17,9 @@ AssetBundles/
 Assets/StreamingAssets/*.*
 .DS_Store
 
+#Dev scenes
+Assets/Scenes/DevLocal.unity
+Assets/Scenes/DevLocal.unity.meta
 
 # User-specific files
 [Uu]ser[Ss]ettings/
