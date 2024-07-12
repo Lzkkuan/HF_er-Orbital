@@ -18,8 +18,8 @@ Assets/StreamingAssets/*.*
 .DS_Store
 
 #Dev scenes
-.unity
-.unity.meta
+Assets/Scenes/DevLocal.unity
+Assets/Scenes/DevLocal.unity.meta
 
 # User-specific files
 [Uu]ser[Ss]ettings/

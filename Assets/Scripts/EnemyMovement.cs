@@ -44,4 +44,12 @@ public class EnemyMovement : MonoBehaviour
     public void OnWalkStop() {
         animator.SetBool("isWalking", false);
     }
+
+    void OnIrritation() {
+        animator.SetTrigger("isIrritated");
+    }
+
+    void OnDeath() {
+        animator.SetTrigger("isDead");
+    }
 }

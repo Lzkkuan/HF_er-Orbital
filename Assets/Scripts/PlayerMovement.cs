@@ -35,8 +35,7 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(newPosition);
     }
 
-    private void UpdateAnimation(float xInput, float yInput)
-    {
+    private void UpdateAnimation(float xInput, float yInput) {
         bool isWalking = (xInput != 0 || yInput != 0);
         animator.SetBool("IsWalking", isWalking);
 
@@ -44,10 +43,17 @@ public class PlayerMovement : MonoBehaviour
         if (xInput > 0)
         {
             sr.flipX = false;
+            gameObject.BroadcastMessage("IsFacingRight", true);
         }
         else if (xInput < 0)
         {
             sr.flipX = true;
+            gameObject.BroadcastMessage("IsFacingRight", false);
         }
     }
+
+    void OnFire() {
+        animator.SetTrigger("Attack");
+    }
+
 }
