@@ -6,15 +6,19 @@ public class ScrollMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;  // Add a field for jump force
+    public float Yaxis;
     private Animator animator;
     private SpriteRenderer sr;
     private bool isGrounded;
+    
+    public GameObject Deathpanel;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        Deathpanel.SetActive(false);
     }
 
     private void Update()
@@ -33,8 +37,11 @@ public class ScrollMovement : MonoBehaviour
         Vector2 movementInput = new Vector2(xInput, rb.velocity.y);
         HandleMovement(movementInput);
         UpdateAnimation(xInput);
-
-        
+        if (transform.position.y < Yaxis)
+        {
+            animator.SetBool("IsDead",true);
+            Deathpanel.SetActive(true);
+        }
     }
 
     private void HandleMovement(Vector2 movementInput)
