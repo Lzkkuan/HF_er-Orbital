@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 9039288489903665755}
   - component: {fileID: 3504954595112581893}
   - component: {fileID: 3933451590372945666}
-  - component: {fileID: 82926827732732016}
   - component: {fileID: 2892584054684473382}
   - component: {fileID: 8291716135154392702}
   - component: {fileID: 3622862314782731282}
@@ -213,19 +212,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &82926827732732016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514469912512894230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f08da1fb9f14800ad42f30cafd5faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 20
 --- !u!50 &2892584054684473382
 Rigidbody2D:
   serializedVersion: 4
@@ -517,6 +503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HPImg: {fileID: 3670117273948374540}
   HPEffect: {fileID: 634753766232145650}
+  PlayerAnimator: {fileID: 0}
+  DeathPanel: {fileID: 0}
   MaxHp: 100
   currentHp: 0
   fade_timer_time: 0.5
