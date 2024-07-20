@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 05bd180335c3143bb9882d43dd9116aa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45aace4b15ce42479a55f7dda2f35fb
+      internalID: -1610607212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbc8454d2420499bbbe5abf8c8117ab
+      internalID: 285215806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc225852a6188481886578ac57ebf3c9
+      internalID: 1706433558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2584db3aae77149b6af5fabd744c5414
+      internalID: 2103773289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84104b03733e40d992975c393a6039a
+      internalID: -418238079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 238
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ba2cbbe09714101add7ef5927bd79e
+      internalID: -2111935113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 187
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b652b01a3318f41679d84013979f9279
+      internalID: -1558559866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 187
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2813c0c1dcd6a425a9885dcd368bae6a
+      internalID: -635965346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 187
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf80d499877c498eb2f7fd3e0fdfe1c
+      internalID: 1942790092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_10
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 187
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2f9dc7fa4404ad587f211e1821e4b2
+      internalID: 388485217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_11
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 186
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9690f2f70dc12432ba6fb67693a08c3e
+      internalID: 2124320347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 188
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a7205a40c0041d3a184c6653766e6b
+      internalID: -481643818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e2cc09efaa84b87bcf2e12a6429eb2
+      internalID: 1043752342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 138
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec4e3741b06e429e888c6d87ee3892d
+      internalID: -1101732310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fe48e7459be4b93a1d8ba38aa4c0af
+      internalID: -836461351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_17
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 88
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ba44c45807247a9bc900e1bab074e1
+      internalID: -428800561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_18
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 88
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec0daa6c19fc4123979d0dc0c7aedb7
+      internalID: -856424554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 89
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7634f52a0a5742918c005c526577517
+      internalID: 453720167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_20
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 87
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51494c9f01a7047edb75d364921845b6
+      internalID: -939092775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_22
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 87
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157744b55b65747c48aec01b44fc2fdd
+      internalID: -319086504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6142c119d7c444214938ab8c7cbbfa96
+      internalID: -886128976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_24
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f65b77641ec4ed6bed231193a610be
+      internalID: 1740588308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd1b147e832345d7bcbcf0e2ecd6dcd
+      internalID: 298498856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7040328353ba34bd2b888d23a6fb1d70
+      internalID: 978272062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Jr Seal_27
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4672295e39ceb45a483cdc8f464924e8
+      internalID: 1452215735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - MapleStory - Jr Seal_0: -1610607212
+      PC Computer - MapleStory - Jr Seal_1: 285215806
+      PC Computer - MapleStory - Jr Seal_10: 388485217
+      PC Computer - MapleStory - Jr Seal_11: 2124320347
+      PC Computer - MapleStory - Jr Seal_12: -1158446758
+      PC Computer - MapleStory - Jr Seal_13: -481643818
+      PC Computer - MapleStory - Jr Seal_14: 1043752342
+      PC Computer - MapleStory - Jr Seal_15: -1101732310
+      PC Computer - MapleStory - Jr Seal_16: -836461351
+      PC Computer - MapleStory - Jr Seal_17: -428800561
+      PC Computer - MapleStory - Jr Seal_18: -856424554
+      PC Computer - MapleStory - Jr Seal_19: 453720167
+      PC Computer - MapleStory - Jr Seal_2: 1706433558
+      PC Computer - MapleStory - Jr Seal_20: -939092775
+      PC Computer - MapleStory - Jr Seal_21: -713654328
+      PC Computer - MapleStory - Jr Seal_22: -319086504
+      PC Computer - MapleStory - Jr Seal_23: -886128976
+      PC Computer - MapleStory - Jr Seal_24: 1740588308
+      PC Computer - MapleStory - Jr Seal_25: 298498856
+      PC Computer - MapleStory - Jr Seal_26: 978272062
+      PC Computer - MapleStory - Jr Seal_27: 1452215735
+      PC Computer - MapleStory - Jr Seal_3: 2103773289
+      PC Computer - MapleStory - Jr Seal_4: -1214151076
+      PC Computer - MapleStory - Jr Seal_5: -418238079
+      PC Computer - MapleStory - Jr Seal_6: -2111935113
+      PC Computer - MapleStory - Jr Seal_7: -1558559866
+      PC Computer - MapleStory - Jr Seal_8: -635965346
+      PC Computer - MapleStory - Jr Seal_9: 1942790092
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
