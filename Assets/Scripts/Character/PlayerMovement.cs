@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     private Vector2 movementInput;
 
+    
+    
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
         float yInput = Input.GetAxisRaw("Vertical");
         movementInput = new Vector2(xInput, yInput).normalized;
         UpdateAnimation(xInput, yInput);
+
+        
     }
 
     private void FixedUpdate()
@@ -55,5 +61,8 @@ public class PlayerMovement : MonoBehaviour
     void OnFire() {
         animator.SetTrigger("Attack");
     }
+
+
+    
 
 }
