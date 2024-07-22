@@ -76,7 +76,7 @@ public class ScrollMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("jumper"))
         {
             isGrounded = true;
         }
@@ -84,7 +84,7 @@ public class ScrollMovement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("jumper"))
         {
             isGrounded = false;
         }
