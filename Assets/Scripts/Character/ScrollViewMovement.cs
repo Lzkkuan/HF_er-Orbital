@@ -14,6 +14,8 @@ public class ScrollMovement : MonoBehaviour
 
     public GameObject Deathpanel;
 
+    private GameObject JumperDown;
+
     // Maintain a set of current collisions
     private HashSet<Collider2D> currentCollisions = new HashSet<Collider2D>();
 
@@ -81,15 +83,16 @@ public class ScrollMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        currentCollisions.Add(collision.collider);
-
+        
         if (collision.gameObject.CompareTag("Ground"))
         {
             Debug.Log("enter ground");
+            currentCollisions.Add(collision.collider);
         }
-        else if (collision.gameObject.CompareTag("jumper"))
+        else if (collision.gameObject.CompareTag("jumper") && collision.gameObject.transform.position.y - 1 < transform.position.y)
         {
             Debug.Log("enter jumper");
+            currentCollisions.Add(collision.collider);
         }
     }
 
@@ -104,6 +107,7 @@ public class ScrollMovement : MonoBehaviour
         else if (collision.gameObject.CompareTag("jumper"))
         {
             Debug.Log("leave jumper");
+
         }
     }
 
