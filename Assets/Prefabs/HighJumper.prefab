@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6501035999187334697}
   - component: {fileID: 4507065160066633747}
   - component: {fileID: 3305942600345587180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HighJumper
   m_TagString: jumper
   m_Icon: {fileID: 0}
