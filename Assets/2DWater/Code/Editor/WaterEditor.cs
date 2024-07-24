@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-
+/*
 namespace Bundos.WaterSystem
 {
     [CustomEditor(typeof(Water))]
@@ -20,3 +20,4 @@ namespace Bundos.WaterSystem
         }
     }
 }
+*/
