@@ -82,4 +82,9 @@ public class HealthBar : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("2s done");
     }
+
+    public void SetHp(float health)
+    {
+        SetHealth(health);
+    }
 }
