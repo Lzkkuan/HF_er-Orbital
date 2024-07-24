@@ -7,7 +7,7 @@ public class DamageableCharacter : MonoBehaviour, Damageable
     Rigidbody2D rb;
     Collider2D physicsCollider;
     public int health;
-    public HealthBarEnemy healthBar; // Reference to the health bar
+    public HealthBar healthBar; // 使用具体类型
 
     // Start is called before the first frame update
     public int Health
@@ -21,7 +21,7 @@ public class DamageableCharacter : MonoBehaviour, Damageable
             health = value;
             if (healthBar != null)
             {
-                healthBar.SetHp(health); // Update the health bar
+                healthBar.SetHp(health); // 更新健康条
             }
             if (health <= 0)
             {
@@ -62,7 +62,7 @@ public class DamageableCharacter : MonoBehaviour, Damageable
     {
         if (healthBar != null)
         {
-            healthBar.SetHp(health); // Initialize the health bar
+            healthBar.SetHp(health); // 初始化健康条
         }
     }
 

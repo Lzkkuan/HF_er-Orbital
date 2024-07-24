@@ -4,24 +4,46 @@ using UnityEngine;
 
 public class SealMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
     Animator animator;
+    private bool isHunted = false;
+    private HuntManager huntManager;
+    [SerializeField]
+    private float moveSpeed = 2f; // 海豹移动速度
+
     void Start()
     {
-      animator = GetComponent<Animator>();  
+        animator = GetComponent<Animator>();
+        huntManager = FindObjectOfType<HuntManager>();
     }
 
-    // Update is called once per frame
-    void OnIrritation() {
+    void Update()
+    {
+        if (isHunted && Input.GetKeyDown(KeyCode.Space)) // Space key
+        {
+            // Check if the mouse click is on the seal
+            Destroy(gameObject);
+            huntManager.ShowHuntMessageAtPosition(transform.position);
+        }
+
+        if (!isHunted)
+        {
+            MoveRight();
+        }
+    }
+
+    void MoveRight()
+    {
+        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+    }
+
+    void OnIrritation()
+    {
         animator.SetTrigger("isIrritated");
     }
 
-    void OnDeath() {
-        animator.SetTrigger("isDead");
-    }
-    
-    void Update()
+    void OnDeath()
     {
-        
+        animator.SetTrigger("isDead");
+        isHunted = true;
     }
 }
