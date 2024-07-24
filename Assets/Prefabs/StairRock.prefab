@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 59432513180686803}
   - component: {fileID: 945854814157934853}
   - component: {fileID: 3971257885242067440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StairRock
   m_TagString: jumper
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}

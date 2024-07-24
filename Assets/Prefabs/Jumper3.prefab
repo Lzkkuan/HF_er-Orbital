@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3412058803330120744}
   - component: {fileID: 3270327123850559481}
   - component: {fileID: 2172557329365045978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jumper3
   m_TagString: jumper
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073503446615796175}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 33.2, y: 5.4, z: 0.2136839}
   m_LocalScale: {x: 2, y: 6, z: 1}
   m_ConstrainProportionsScale: 0

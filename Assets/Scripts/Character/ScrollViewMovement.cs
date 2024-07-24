@@ -1,17 +1,21 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ScrollMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] float moveSpeed;
-    [SerializeField] float jumpForce;  // Add a field for jump force
+    [SerializeField] float jumpForce;
     public float Yaxis;
     private Animator animator;
     private SpriteRenderer sr;
     private bool isGrounded;
-    
+
     public GameObject Deathpanel;
+
+    // Maintain a set of current collisions
+    private HashSet<Collider2D> currentCollisions = new HashSet<Collider2D>();
 
     private void Awake()
     {
@@ -23,23 +27,26 @@ public class ScrollMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        CheckGroundStatus();
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded )
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            
         }
 
         if (Input.GetKeyDown(KeyCode.Tab) && isGrounded)
         {
             Stand();
         }
+
         float xInput = Input.GetAxisRaw("Horizontal");
         Vector2 movementInput = new Vector2(xInput, rb.velocity.y);
         HandleMovement(movementInput);
         UpdateAnimation(xInput);
+
         if (transform.position.y < Yaxis)
         {
-            animator.SetBool("IsDead",true);
+            animator.SetBool("IsDead", true);
             Deathpanel.SetActive(true);
         }
     }
@@ -53,7 +60,6 @@ public class ScrollMovement : MonoBehaviour
     {
         animator.SetTrigger("IsStanding");
         StartCoroutine(StandToWalk(0.5f));
-        
     }
 
     private void UpdateAnimation(float xInput)
@@ -61,7 +67,6 @@ public class ScrollMovement : MonoBehaviour
         bool isWalking = (xInput != 0);
         animator.SetBool("IsWalking", isWalking);
 
-        // Flip sprite based on movement direction
         if (xInput > 0)
         {
             sr.flipX = false;
@@ -76,23 +81,60 @@ public class ScrollMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("jumper"))
+        currentCollisions.Add(collision.collider);
+
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
+            Debug.Log("enter ground");
+        }
+        else if (collision.gameObject.CompareTag("jumper"))
+        {
+            Debug.Log("enter jumper");
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("jumper"))
+        currentCollisions.Remove(collision.collider);
+
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false;
+            Debug.Log("leave ground");
         }
+        else if (collision.gameObject.CompareTag("jumper"))
+        {
+            Debug.Log("leave jumper");
+        }
+    }
+
+    private void CheckGroundStatus()
+    {
+        isGrounded = false;
+        foreach (Collider2D col in currentCollisions)
+        {
+            if (col.CompareTag("Ground") || col.CompareTag("jumper"))
+            {
+                isGrounded = true;
+                break;
+            }
+        }
+    }
+
+    private bool IsOnJumper()
+    {
+        foreach (Collider2D col in currentCollisions)
+        {
+            if (col.CompareTag("jumper"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private IEnumerator StandToWalk(float delay)
     {
-        yield return new WaitForSecondsRealtime(delay); // Wait for the specified delay
+        yield return new WaitForSecondsRealtime(delay);
         animator.SetTrigger("StandToWalk");
         animator.SetBool("IsStanding", false);
     }
