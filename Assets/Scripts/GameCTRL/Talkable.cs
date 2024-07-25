@@ -25,7 +25,7 @@ public class Talkable : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyUp(KeyCode.Space) && DialogueManager.instance.dialogueBox.activeInHierarchy == false)
+        if (isPlayerInRange && Input.GetKeyUp(KeyCode.F) && DialogueManager.instance.dialogueBox.activeInHierarchy == false)
         {
             DialogueManager.instance.showDialogue(lines);
         }
