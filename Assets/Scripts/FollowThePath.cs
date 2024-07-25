@@ -30,30 +30,36 @@ public class FollowThePath : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            sr.flipX = false;
             StartCoroutine(MoveCoroutine());
         }
     }
 
     private IEnumerator MoveCoroutine()
     {
-        while (waypointIndex <= waypoints.Length - 1)
+        while (waypointIndex < waypoints.Length)
         {
+            Vector2 targetPosition = waypoints[waypointIndex].transform.position;
+            Vector2 direction = targetPosition - (Vector2)transform.position;
+
+            // 设置角色朝向
+            sr.flipX = direction.x < 0;
+
             animator.SetBool("IsWalking", true);
-            transform.position = Vector2.MoveTowards(transform.position,
-                waypoints[waypointIndex].transform.position,
-                moveSpeed * Time.deltaTime);
-            
-            float distance = Vector2.Distance(transform.position, waypoints[waypointIndex].transform.position);
-            Debug.Log("Distance to waypoint " + waypointIndex + ": " + distance);
-            
-            if (distance < 0.1f)
+
+            while (Vector2.Distance(transform.position, targetPosition) > 0.1f)
             {
-                waypointIndex += 1;
-                Debug.Log("Moving to next waypoint: " + waypointIndex);
+                transform.position = Vector2.MoveTowards(transform.position,
+                    targetPosition,
+                    moveSpeed * Time.deltaTime);
+                
+                yield return null;
             }
-            yield return null;
+
+            // 更新到下一个路径点
+            waypointIndex += 1;
+            Debug.Log("Moving to next waypoint: " + waypointIndex);
         }
+
         animator.SetBool("IsWalking", false);
         Debug.Log("Reached final waypoint");
     }
