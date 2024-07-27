@@ -72,11 +72,19 @@ public class EnemyMovement : MonoBehaviour
             HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
             if (healthBar != null)
             {
-                healthBar.DecreaseHp(damage);
+                HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+                if (healthBar != null)
+                {
+                    healthBar.DecreaseHp(damage);
+                }
+                else
+                {
+                    Debug.LogWarning("HealthBar component not found on detected object.");
+                }
             }
             else
             {
-                Debug.LogWarning("HealthBar component not found on detected object.");
+                Debug.LogWarning("Detected object is null.");
             }
         }
         else
@@ -85,6 +93,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 }
+
 
 
     public void OnWalk()
