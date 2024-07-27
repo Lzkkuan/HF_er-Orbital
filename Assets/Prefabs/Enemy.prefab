@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289023206207712459}
   - component: {fileID: 2059256570815790719}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1707387234956911508}
   - component: {fileID: 4506172652479363498}
   - component: {fileID: 1038409594609960540}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 623616782793885702}
   - component: {fileID: 151387340832896540}
   - component: {fileID: 3821261157754798232}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 2299501714177692203}
   - component: {fileID: 5659826329272213925}
   - component: {fileID: 7121373711306232339}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 7106939377587411960}
   - component: {fileID: 3789736468602212969}
   - component: {fileID: 2772076568672559455}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hpeffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 6461410352339330362}
   - component: {fileID: 5509382427461646286}
   - component: {fileID: 4421632080266442263}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

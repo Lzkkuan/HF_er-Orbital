@@ -9,11 +9,13 @@ public class SealMovement : MonoBehaviour
     private HuntManager huntManager;
     [SerializeField]
     private float moveSpeed = 2f; // 海豹移动速度
+    DetectionZone dz;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         huntManager = FindObjectOfType<HuntManager>();
+        dz = GetComponent<DetectionZone>();
     }
 
     void Update()
@@ -23,6 +25,15 @@ public class SealMovement : MonoBehaviour
             // Check if the mouse click is on the seal
             Destroy(gameObject);
             huntManager.ShowHuntMessageAtPosition(transform.position);
+            HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+            if (healthBar != null)
+            {
+                healthBar.IncreaseHp(10);
+            }
+            else
+            {
+                Debug.LogWarning("HealthBar component not found on detected object.");
+            }
         }
 
         if (!isHunted)

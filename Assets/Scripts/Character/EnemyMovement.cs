@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        dz = GetComponentInChildren<DetectionZone>(); // 获取子对象上的DetectionZone组件
+        dz = GetComponent<DetectionZone>(); // 获取子对象上的DetectionZone组件
         animator = GetComponent<Animator>();
         lastAttackTime = -attackCooldown; // 初始化为可以立即攻击
     }
@@ -62,17 +62,30 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void AttackPlayer()
+{
+    animator.SetBool("isAttacking", true);
+    if (Time.time >= lastAttackTime + attackCooldown)
     {
-        animator.SetBool("isAttacking", true);
-        if (Time.time >= lastAttackTime + attackCooldown)
+        lastAttackTime = Time.time;
+        if (dz.detectedObj != null)
         {
-            lastAttackTime = Time.time;
-            if (dz.detectedObj != null)
+            HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+            if (healthBar != null)
             {
-                dz.detectedObj.GetComponentInChildren<HealthBar>().DecreaseHp(damage);
+                healthBar.DecreaseHp(damage);
+            }
+            else
+            {
+                Debug.LogWarning("HealthBar component not found on detected object.");
             }
         }
+        else
+        {
+            Debug.LogWarning("Detected object is null.");
+        }
     }
+}
+
 
     public void OnWalk()
     {
