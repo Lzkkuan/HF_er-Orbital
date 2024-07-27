@@ -62,12 +62,15 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void AttackPlayer()
+{
+    animator.SetBool("isAttacking", true);
+    if (Time.time >= lastAttackTime + attackCooldown)
     {
-        animator.SetBool("isAttacking", true);
-        if (Time.time >= lastAttackTime + attackCooldown)
+        lastAttackTime = Time.time;
+        if (dz.detectedObj != null)
         {
-            lastAttackTime = Time.time;
-            if (dz.detectedObj != null)
+            HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+            if (healthBar != null)
             {
                 HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
                 if (healthBar != null)
@@ -84,7 +87,13 @@ public class EnemyMovement : MonoBehaviour
                 Debug.LogWarning("Detected object is null.");
             }
         }
+        else
+        {
+            Debug.LogWarning("Detected object is null.");
+        }
     }
+}
+
 
 
     public void OnWalk()
