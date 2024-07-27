@@ -69,10 +69,10 @@ public class EnemyMovement : MonoBehaviour
         lastAttackTime = Time.time;
         if (dz.detectedObj != null)
         {
-            healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+            HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
             if (healthBar != null)
             {
-                HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+                healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
                 if (healthBar != null)
                 {
                     healthBar.DecreaseHp(damage);
