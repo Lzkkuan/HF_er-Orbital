@@ -1,0 +1,32 @@
+name: Update GitHub Project
+
+on:
+  issues:
+    types: [opened, edited, reopened, closed]
+  pull_request:
+    types: [opened, edited, reopened, closed]
+
+jobs:
+  update-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update issues and PRs in project
+        run: |
+          ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}"
+          if [ -n "${{ github.event.issue }}" ]; then
+            ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}"
+          elif [ -n "${{ github.event.pull_request }}" ]; then
+            ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}"
+          fi
+
+          curl -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+                "project_id": "YOUR_PROJECT_ID",
+                "column_id": "YOUR_COLUMN_ID"
+              }' \
+          $ISSUE_URL
