@@ -8,23 +8,21 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  
+    runs-on: ubuntu-latest  # or 'windows-latest' if you need Windows-specific build steps
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Unity
-        uses: unity-actions/setup@v2
+        uses: game-ci/unity-action@v2
         with:
-          unity-version: '2022.3.29f1'  
+          unity-version: '2022.3.29f1'  # Change to your Unity version
 
       - name: Build Project
         run: |
           # Run Unity in batch mode to build your project
-          /path/to/Unity/Editor/Unity -batchmode -quit -projectPath . -buildWindowsPlayer "build/YourGame.exe"
+          /opt/unity/Editor/Unity -batchmode -quit -projectPath . -buildWindowsPlayer "build/YourGame.exe"
           # Replace 'build/YourGame.exe' with your build path and platform
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -32,7 +30,7 @@ jobs:
       - name: Run Tests
         run: |
           # Run Unity tests if needed
-          /path/to/Unity/Editor/Unity -batchmode -quit -projectPath . -runTests -testResults "TestResults.xml"
+          /opt/unity/Editor/Unity -batchmode -quit -projectPath . -runTests -testResults "TestResults.xml"
           # Adjust test results path and Unity test command as necessary
 
       - name: Upload Test Results
