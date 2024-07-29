@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -68,16 +69,19 @@ public class HealthBar : MonoBehaviour
 
     public IEnumerator UpdateHpEffect()
     {
+        //count variables needed
         float effectLength = HPEffect.fillAmount - HPImg.fillAmount;
         float elapsedTime = 0f;
 
         while (elapsedTime < fade_timer_time && effectLength != 0)
         {
+            //Update timer
             elapsedTime += Time.deltaTime;
             HPEffect.fillAmount = Mathf.Lerp(HPImg.fillAmount + effectLength, HPImg.fillAmount, elapsedTime / fade_timer_time);
             yield return null;
         }
 
+        //update filling proportion
         HPEffect.fillAmount = HPImg.fillAmount;
     }
 
@@ -134,4 +138,5 @@ public class HealthBar : MonoBehaviour
 
         StrengthEffect.fillAmount = StrengthImg.fillAmount;
     }
+
 }

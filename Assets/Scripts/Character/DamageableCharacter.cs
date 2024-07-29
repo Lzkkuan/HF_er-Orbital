@@ -1,27 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageableCharacter : MonoBehaviour, Damageable
+public class DamageableCharacter : MonoBehaviour
 {
-    Rigidbody2D rb;
-    Collider2D physicsCollider;
+    private Rigidbody2D rb;
+    private Collider2D physicsCollider;
     public int health;
-    public HealthBar healthBar; // 使用具体类型
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     public int Health
     {
-        get
-        {
-            return health;
-        }
+        get { return health; }
         set
         {
             health = value;
             if (healthBar != null)
             {
-                healthBar.SetHp(health); // 更新健康条
+                healthBar.SetHp(health);
             }
             if (health <= 0)
             {
@@ -35,13 +30,10 @@ public class DamageableCharacter : MonoBehaviour, Damageable
         }
     }
 
-    bool targetable;
+    private bool targetable;
     public bool Targetable
     {
-        get
-        {
-            return targetable;
-        }
+        get { return targetable; }
         set
         {
             targetable = value;
@@ -62,17 +54,17 @@ public class DamageableCharacter : MonoBehaviour, Damageable
     {
         if (healthBar != null)
         {
-            healthBar.SetHp(health); // 初始化健康条
+            healthBar.SetHp(health);
         }
     }
 
     public void OnHit(int damage, Vector2 knockback)
     {
         Health -= damage;
-        rb.AddForce(knockback);
+        rb.AddForce(knockback, ForceMode2D.Impulse);
     }
 
-    public void onDestruction()
+    public void OnDestruction()
     {
         Destroy(gameObject);
     }
