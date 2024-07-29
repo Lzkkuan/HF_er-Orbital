@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Change this to 'windows-latest' if you need Windows-specific build steps
+    runs-on: windows-latest  
 
     steps:
       - name: Checkout repository
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Unity
         uses: unity-actions/setup@v2
         with:
-          unity-version: '2023.1.0f1'  # Change to your Unity version
+          unity-version: '2022.3.29f1'  
 
       - name: Build Project
         run: |
@@ -29,11 +29,17 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
-      - name: Upload build artifacts
+      - name: Run Tests
+        run: |
+          # Run Unity tests if needed
+          /path/to/Unity/Editor/Unity -batchmode -quit -projectPath . -runTests -testResults "TestResults.xml"
+          # Adjust test results path and Unity test command as necessary
+
+      - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
-          name: UnityBuild
-          path: build/YourGame.exe  # Adjust this path to match your build output
+          name: UnityTestResults
+          path: TestResults.xml  # Adjust this path if needed
 
       - name: Auto-merge PR if no conflicts
         id: auto-merge
