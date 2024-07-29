@@ -1,4 +1,4 @@
-name: .NET Core Desktop
+name: Unity Build
 
 on:
   push:
@@ -8,62 +8,32 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
-
-    runs-on: windows-latest
-
-    env:
-      Solution_Name: ""
-      Test_Project_Path: PlayModetesting
-      Wap_Project_Directory: HF_er-Orbital
-      Wap_Project_Path: HF_er-Orbital
+    runs-on: ubuntu-latest  # Change this to 'windows-latest' if you need Windows-specific build steps
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install .NET Core
-        uses: actions/setup-dotnet@v4
+      - name: Setup Unity
+        uses: unity-actions/setup@v2
         with:
-          dotnet-version: 8.0.x
+          unity-version: '2023.1.0f1'  # Change to your Unity version
 
-      - name: Setup MSBuild.exe
-        uses: microsoft/setup-msbuild@v2
-
-      - name: Execute unit tests
-        run: dotnet test
-
-      - name: Restore the application
-        run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
-        env:
-          Configuration: ${{ matrix.configuration }}
-
-      - name: Decode the pfx
+      - name: Build Project
         run: |
-          $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
-          $certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath GitHubActionsWorkflow.pfx
-          [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
-
-      - name: Create the app package
-        run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
+          # Run Unity in batch mode to build your project
+          /path/to/Unity/Editor/Unity -batchmode -quit -projectPath . -buildWindowsPlayer "build/YourGame.exe"
+          # Replace 'build/YourGame.exe' with your build path and platform
         env:
-          Appx_Bundle: Always
-          Appx_Bundle_Platforms: x86|x64
-          Appx_Package_Build_Mode: StoreUpload
-          Configuration: ${{ matrix.configuration }}
-
-      - name: Remove the pfx
-        run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: MSIX Package
-          path: ${{ env.Wap_Project_Directory }}\AppPackages
+          name: UnityBuild
+          path: build/YourGame.exe  # Adjust this path to match your build output
 
       - name: Auto-merge PR if no conflicts
         id: auto-merge
