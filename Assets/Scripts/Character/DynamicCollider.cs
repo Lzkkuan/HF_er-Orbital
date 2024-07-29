@@ -1,10 +1,20 @@
 using UnityEngine;
 
+/// <summary>
+/// Updates the size and offset of the BoxCollider2D based on the sprite's bounds.
+/// </summary>
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class DynamicCollider : MonoBehaviour
 {
+    /// <summary>
+    /// The BoxCollider2D component attached to the GameObject.
+    /// </summary>
     public BoxCollider2D boxCollider;
+
+    /// <summary>
+    /// The SpriteRenderer component attached to the GameObject.
+    /// </summary>
     public SpriteRenderer spriteRenderer;
 
     void Start()
@@ -19,6 +29,9 @@ public class DynamicCollider : MonoBehaviour
         UpdateCollider();
     }
 
+    /// <summary>
+    /// Updates the size and offset of the BoxCollider2D based on the bounds of the sprite.
+    /// </summary>
     void UpdateCollider()
     {
         if (spriteRenderer.sprite == null)

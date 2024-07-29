@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ToggleMenu : MonoBehaviour
 {
-    public GameObject menuPanel; // Reference to your panel
+    public GameObject menuPanel; // Reference to the death panel
 
     void Update()
     {

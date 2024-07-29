@@ -2,25 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the movement and attack behavior of an enemy character.
+/// </summary>
 public class EnemyMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
-    SpriteRenderer sr;
-    DetectionZone dz;
-    Animator animator;
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private DetectionZone dz;
+    private Animator animator;
+
+    /// <summary>
+    /// The movement speed of the enemy.
+    /// </summary>
     public float speed;
-    public float attackRange; // 攻击范围
-    public int damage; // 攻击伤害
-    public float attackCooldown = 1f; // 攻击冷却时间
+
+    /// <summary>
+    /// The range within which the enemy can attack.
+    /// </summary>
+    public float attackRange;
+
+    /// <summary>
+    /// The damage dealt by the enemy's attack.
+    /// </summary>
+    public int damage;
+
+    /// <summary>
+    /// The cooldown time between attacks.
+    /// </summary>
+    public float attackCooldown = 1f;
+
     private float lastAttackTime;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        dz = GetComponent<DetectionZone>(); // 获取子对象上的DetectionZone组件
+        dz = GetComponent<DetectionZone>();
         animator = GetComponent<Animator>();
-        lastAttackTime = -attackCooldown; // 初始化为可以立即攻击
+        lastAttackTime = -attackCooldown; // Initialize to allow immediate attack
     }
 
     private void FixedUpdate()
@@ -47,6 +67,10 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Follows the player in the specified direction.
+    /// </summary>
+    /// <param name="direction">The direction to move towards.</param>
     private void FollowPlayer(Vector2 direction)
     {
         rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
@@ -61,18 +85,18 @@ public class EnemyMovement : MonoBehaviour
         OnWalk();
     }
 
+    /// <summary>
+    /// Attacks the player if within range and the cooldown has elapsed.
+    /// </summary>
     private void AttackPlayer()
-{
-    animator.SetBool("isAttacking", true);
-    if (Time.time >= lastAttackTime + attackCooldown)
     {
-        lastAttackTime = Time.time;
-        if (dz.detectedObj != null)
+        animator.SetBool("isAttacking", true);
+        if (Time.time >= lastAttackTime + attackCooldown)
         {
-            HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
-            if (healthBar != null)
+            lastAttackTime = Time.time;
+            if (dz.detectedObj != null)
             {
-                healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+                HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
                 if (healthBar != null)
                 {
                     healthBar.DecreaseHp(damage);
@@ -87,32 +111,37 @@ public class EnemyMovement : MonoBehaviour
                 Debug.LogWarning("Detected object is null.");
             }
         }
-        else
-        {
-            Debug.LogWarning("Detected object is null.");
-        }
     }
-}
 
-
-
+    /// <summary>
+    /// Sets the walking animation and stops the attacking animation.
+    /// </summary>
     public void OnWalk()
     {
         animator.SetBool("isWalking", true);
         animator.SetBool("isAttacking", false);
     }
 
+    /// <summary>
+    /// Stops the walking and attacking animations.
+    /// </summary>
     public void OnWalkStop()
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", false);
     }
 
+    /// <summary>
+    /// Triggers the irritation animation.
+    /// </summary>
     void OnIrritation()
     {
         animator.SetTrigger("isIrritated");
     }
 
+    /// <summary>
+    /// Triggers the death animation.
+    /// </summary>
     void OnDeath()
     {
         animator.SetTrigger("isDead");
