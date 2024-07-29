@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 1752511852}
   - component: {fileID: 1752511851}
   - component: {fileID: 1752511850}
-  - component: {fileID: 1752511849}
+  - component: {fileID: 1752511853}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -561,18 +561,6 @@ RectTransform:
   m_AnchoredPosition: {x: -48.144592, y: -129.15576}
   m_SizeDelta: {x: 232.2892, y: 52.3115}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1752511849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752511847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5148245f6fbdf4d8242af2747aa539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1752511850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,9 +605,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1752511849}
-        m_TargetAssemblyTypeName: EnderMenu, Assembly-CSharp
-        m_MethodName: EndMenu
+      - m_Target: {fileID: 1752511853}
+        m_TargetAssemblyTypeName: ToStart, Scripts
+        m_MethodName: GoToStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -667,6 +655,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752511847}
   m_CullTransparentMesh: 1
+--- !u!114 &1752511853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752511847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc588275b87a014b9cea33d30f3f659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1928941709
 GameObject:
   m_ObjectHideFlags: 0
