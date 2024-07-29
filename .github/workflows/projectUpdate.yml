@@ -16,17 +16,46 @@ jobs:
 
       - name: Update issues and PRs in project
         run: |
-          ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}"
+          # Determine if it's an issue or a PR and construct the API URL
           if [ -n "${{ github.event.issue }}" ]; then
             ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}"
           elif [ -n "${{ github.event.pull_request }}" ]; then
             ISSUE_URL="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}"
+          else
+            echo "No issue or PR detected."
+            exit 1
           fi
 
-          curl -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          # Determine the action based on the issue or PR state
+          STATE=${{ github.event.action }}
+          
+          # Map states to project column IDs
+          case $STATE in
+            opened)
+              COLUMN_ID="YOUR_OPENED_COLUMN_ID"
+              ;;
+            edited)
+              COLUMN_ID="YOUR_EDITED_COLUMN_ID"
+              ;;
+            reopened)
+              COLUMN_ID="YOUR_REOPENED_COLUMN_ID"
+              ;;
+            closed)
+              COLUMN_ID="YOUR_CLOSED_COLUMN_ID"
+              ;;
+            *)
+              echo "Unhandled action: $STATE"
+              exit 1
+              ;;
+          esac
+
+          # Update the issue or PR in the project board
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Content-Type: application/json" \
           -d '{
-                "project_id": "YOUR_PROJECT_ID",
-                "column_id": "YOUR_COLUMN_ID"
+                "content_id": '${{ github.event.issue.number || github.event.pull_request.number }}',
+                "content_type": "Issue",  # Change to "PullRequest" if dealing with PRs
+                "project_id": "1",
+                "column_id": "10293198"
               }' \
-          $ISSUE_URL
+          "https://api.github.com/projects/columns/cards"
