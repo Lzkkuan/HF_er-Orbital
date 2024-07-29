@@ -2490,9 +2490,9 @@ GameObject:
   m_Component:
   - component: {fileID: 334882260}
   - component: {fileID: 334882264}
-  - component: {fileID: 334882263}
   - component: {fileID: 334882262}
   - component: {fileID: 334882261}
+  - component: {fileID: 334882265}
   m_Layer: 5
   m_Name: NEXT
   m_TagString: Untagged
@@ -2564,9 +2564,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 334882263}
-        m_TargetAssemblyTypeName: OneFor, Assembly-CSharp
-        m_MethodName: StarterMenu
+      - m_Target: {fileID: 334882265}
+        m_TargetAssemblyTypeName: ToAutumn, Scripts
+        m_MethodName: GoToAutumn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2606,18 +2606,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &334882263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334882259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b250473ab3883041935d48e644385d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &334882264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2626,6 +2614,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334882259}
   m_CullTransparentMesh: 1
+--- !u!114 &334882265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334882259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5148245f6fbdf4d8242af2747aa539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &338284879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,8 +3606,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 692869663}
-        m_TargetAssemblyTypeName: TwoFor, Assembly-CSharp
-        m_MethodName: DEAD
+        m_TargetAssemblyTypeName: ToSettings, Scripts
+        m_MethodName: GoToSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -131597,8 +131597,8 @@ GameObject:
   - component: {fileID: 991414048}
   - component: {fileID: 991414052}
   - component: {fileID: 991414051}
+  - component: {fileID: 991414053}
   - component: {fileID: 991414050}
-  - component: {fileID: 991414049}
   m_Layer: 5
   m_Name: menu
   m_TagString: Untagged
@@ -131626,18 +131626,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9, y: 315}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &991414049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991414047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c82ac5379d6fc4e99fa17fb428cac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &991414050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131682,9 +131670,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 991414049}
-        m_TargetAssemblyTypeName: OneBack, Assembly-CSharp
-        m_MethodName: OneStepBack
+      - m_Target: {fileID: 991414053}
+        m_TargetAssemblyTypeName: ToStart, Scripts
+        m_MethodName: GoToStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -131732,6 +131720,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991414047}
   m_CullTransparentMesh: 1
+--- !u!114 &991414053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991414047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc588275b87a014b9cea33d30f3f659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038063218
 GameObject:
   m_ObjectHideFlags: 0
@@ -132589,7 +132589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1228138219
 RectTransform:
   m_ObjectHideFlags: 0

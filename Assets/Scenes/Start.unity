@@ -365,8 +365,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 40243907}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: StarterMenu
+        m_TargetAssemblyTypeName: ToSpring, Scripts
+        m_MethodName: GoToSpring
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1006,8 +1006,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1156017293}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: StarterMenu
+        m_TargetAssemblyTypeName: ToSummer, Scripts
+        m_MethodName: GoToSummer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1156017288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b250473ab3883041935d48e644385d2, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c2a0f0d99d6824aba8bb4b53d1ef41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1222830331
@@ -1310,8 +1310,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1496214662}
-        m_TargetAssemblyTypeName: ThreeFor, Assembly-CSharp
-        m_MethodName: ThreeStepsFor
+        m_TargetAssemblyTypeName: ToSettings, Scripts
+        m_MethodName: GoToSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1496214657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c2a0f0d99d6824aba8bb4b53d1ef41, type: 3}
+  m_Script: {fileID: 11500000, guid: 2888ab8c432592742a22b5ce09a3fad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1538332656
