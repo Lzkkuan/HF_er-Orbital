@@ -2,16 +2,22 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Controls the movement, animation, and interactions of the player character in a scrolling environment.
+/// </summary>
 public class ScrollMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] float moveSpeed;
-    [SerializeField] float jumpForce;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpForce;
     public float Yaxis;
     private Animator animator;
     private SpriteRenderer sr;
     private bool isGrounded;
 
+    /// <summary>
+    /// Panel displayed when the character dies.
+    /// </summary>
     public GameObject Deathpanel;
 
     private GameObject JumperDown;
@@ -19,6 +25,9 @@ public class ScrollMovement : MonoBehaviour
     // Maintain a set of current collisions
     private HashSet<Collider2D> currentCollisions = new HashSet<Collider2D>();
 
+    /// <summary>
+    /// Initializes the components and hides the Death panel.
+    /// </summary>
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,11 +36,14 @@ public class ScrollMovement : MonoBehaviour
         Deathpanel.SetActive(false);
     }
 
+    /// <summary>
+    /// Updates character state and movement each frame.
+    /// </summary>
     private void Update()
     {
         CheckGroundStatus();
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded )
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
@@ -53,17 +65,28 @@ public class ScrollMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles movement based on player input.
+    /// </summary>
+    /// <param name="movementInput">The movement vector based on player input.</param>
     private void HandleMovement(Vector2 movementInput)
     {
         rb.velocity = new Vector2(movementInput.x * moveSpeed, rb.velocity.y);
     }
 
+    /// <summary>
+    /// Triggers the standing animation and transitions to walking after a delay.
+    /// </summary>
     private void Stand()
     {
         animator.SetTrigger("IsStanding");
         StartCoroutine(StandToWalk(0.5f));
     }
 
+    /// <summary>
+    /// Updates the character's animation state based on movement input.
+    /// </summary>
+    /// <param name="xInput">The horizontal input from the player.</param>
     private void UpdateAnimation(float xInput)
     {
         bool isWalking = (xInput != 0);
@@ -81,9 +104,12 @@ public class ScrollMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles collisions with ground and jumper objects.
+    /// </summary>
+    /// <param name="collision">The collision details.</param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Ground"))
         {
             Debug.Log("enter ground");
@@ -96,6 +122,10 @@ public class ScrollMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles the exit of collisions with ground and jumper objects.
+    /// </summary>
+    /// <param name="collision">The collision details.</param>
     private void OnCollisionExit2D(Collision2D collision)
     {
         currentCollisions.Remove(collision.collider);
@@ -107,10 +137,12 @@ public class ScrollMovement : MonoBehaviour
         else if (collision.gameObject.CompareTag("jumper"))
         {
             Debug.Log("leave jumper");
-
         }
     }
 
+    /// <summary>
+    /// Checks if the character is grounded by iterating through current collisions.
+    /// </summary>
     private void CheckGroundStatus()
     {
         isGrounded = false;
@@ -124,6 +156,10 @@ public class ScrollMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Determines if the character is on a jumper object.
+    /// </summary>
+    /// <returns>True if on a jumper object; otherwise, false.</returns>
     private bool IsOnJumper()
     {
         foreach (Collider2D col in currentCollisions)
@@ -136,6 +172,10 @@ public class ScrollMovement : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Coroutine to transition from standing to walking after a delay.
+    /// </summary>
+    /// <param name="delay">The delay before transitioning to walking.</param>
     private IEnumerator StandToWalk(float delay)
     {
         yield return new WaitForSecondsRealtime(delay);
@@ -143,6 +183,9 @@ public class ScrollMovement : MonoBehaviour
         animator.SetBool("IsStanding", false);
     }
 
+    /// <summary>
+    /// Triggers the attack animation.
+    /// </summary>
     void OnFire()
     {
         animator.SetTrigger("Attack");

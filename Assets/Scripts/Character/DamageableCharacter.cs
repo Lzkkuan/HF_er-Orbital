@@ -1,13 +1,26 @@
 using UnityEngine;
 
+/// <summary>
+/// Represents a damageable character in the game, managing health, targetability, and interactions.
+/// </summary>
 public class DamageableCharacter : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D physicsCollider;
+
+    /// <summary>
+    /// The current health of the character.
+    /// </summary>
     public int health;
+
+    /// <summary>
+    /// Reference to the health bar UI element.
+    /// </summary>
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Gets or sets the health of the character. Updates the health bar and handles death or irritation events.
+    /// </summary>
     public int Health
     {
         get { return health; }
@@ -31,6 +44,10 @@ public class DamageableCharacter : MonoBehaviour
     }
 
     private bool targetable;
+
+    /// <summary>
+    /// Gets or sets whether the character is targetable. Disables Rigidbody2D simulation when not targetable.
+    /// </summary>
     public bool Targetable
     {
         get { return targetable; }
@@ -58,12 +75,20 @@ public class DamageableCharacter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Applies damage to the character and applies knockback force.
+    /// </summary>
+    /// <param name="damage">The amount of damage to apply.</param>
+    /// <param name="knockback">The knockback force to apply to the character.</param>
     public void OnHit(int damage, Vector2 knockback)
     {
         Health -= damage;
         rb.AddForce(knockback, ForceMode2D.Impulse);
     }
 
+    /// <summary>
+    /// Destroys the game object.
+    /// </summary>
     public void OnDestruction()
     {
         Destroy(gameObject);
