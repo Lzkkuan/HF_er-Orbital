@@ -15,10 +15,10 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: your-solution-name
-      Test_Project_Path: your-test-project-path
-      Wap_Project_Directory: your-wap-project-directory-name
-      Wap_Project_Path: your-wap-project-path
+      Solution_Name: ""
+      Test_Project_Path: PlayModetesting
+      Wap_Project_Directory: HF_er-Orbital
+      Wap_Project_Path: HF_er-Orbital
 
     steps:
       - name: Checkout
