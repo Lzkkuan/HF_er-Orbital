@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using DG.Tweening;
 
 public class ItemShaking : MonoBehaviour
@@ -30,3 +30,4 @@ public class ItemShaking : MonoBehaviour
         waterSequence.SetLoops(-1, LoopType.Yoyo);
     }
 }
+*/
