@@ -254,11 +254,10 @@ GameObject:
   - component: {fileID: 3933451590372945666}
   - component: {fileID: 2892584054684473382}
   - component: {fileID: 8291716135154392702}
-  - component: {fileID: 9009632582538717096}
+  - component: {fileID: 5612925836115426343}
   - component: {fileID: 6489362569648544792}
-  - component: {fileID: 6852533355767488324}
   - component: {fileID: 5240706916185909869}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -360,7 +359,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -412,7 +411,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9009632582538717096
+--- !u!114 &5612925836115426343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,25 +420,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5514469912512894230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcb4b23ed6254dd8bec19e0ca0865a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d8ab8ffe5a4223468eb81c58fbf34bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
   healthBar: {fileID: 1819184966810422359}
 --- !u!114 &6489362569648544792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5514469912512894230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f08da1fb9f14800ad42f30cafd5faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 20
---- !u!114 &6852533355767488324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -989,10 +975,10 @@ MonoBehaviour:
   StrengthEffect: {fileID: 3753832217270259773}
   PlayerAnimator: {fileID: 8291716135154392702}
   DeathPanel: {fileID: 0}
-  MaxHp: 100
+  MaxHp: 200
   currentHp: 20
   fade_timer_time: 0.5
-  strength: 3
+  strength: 2
 --- !u!1 &8817744937791824784
 GameObject:
   m_ObjectHideFlags: 0

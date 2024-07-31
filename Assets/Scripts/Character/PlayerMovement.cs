@@ -33,6 +33,10 @@ namespace movement
             float yInput = Input.GetAxisRaw("Vertical");
             movementInput = new Vector2(xInput, yInput).normalized;
             UpdateAnimation(xInput, yInput);
+            if (Input.GetMouseButtonDown(0))
+            {
+                OnFire();
+            }
         }
 
         /// <summary>

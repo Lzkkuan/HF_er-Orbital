@@ -56,8 +56,9 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
-        // Update logic (if any) should be placed here.
+       
     }
+
 }
