@@ -47,6 +47,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (dz.detectedObj != null)
         {
+            Debug.Log("detecting:" + dz.detectedObj);
             Vector2 direction = (dz.detectedObj.transform.position - transform.position).normalized;
             float distance = Vector2.Distance(dz.detectedObj.transform.position, transform.position);
 
@@ -96,14 +97,14 @@ public class EnemyMovement : MonoBehaviour
             lastAttackTime = Time.time;
             if (dz.detectedObj != null)
             {
-                HealthBar healthBar = dz.detectedObj.GetComponentInChildren<HealthBar>();
+                HealthBar healthBar = dz.detectedObj.GetComponent<HealthBar>();
                 if (healthBar != null)
                 {
                     healthBar.DecreaseHp(damage);
                 }
                 else
                 {
-                    Debug.LogWarning("HealthBar component not found on detected object.");
+                    Debug.LogWarning("HealthBar component not found on:" + dz.detectedObj + "noooooo");
                 }
             }
             else

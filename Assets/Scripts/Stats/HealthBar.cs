@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
     private Coroutine damage_coroutine; // Coroutine for updating health effect
     private Coroutine strength_coroutine; // Coroutine for updating strength effect
 
-    [Range(1, 5)]
+    [Range(1, 2)]
     public float strength = 1; // Strength value affecting maximum health
 
     /// <summary>
@@ -133,7 +133,7 @@ public class HealthBar : MonoBehaviour
     /// </summary>
     private void UpdateMaxHp()
     {
-        MaxHp = 20 * strength; // Calculate maximum health
+        MaxHp = 100 * strength; // Calculate maximum health
         currentHp = Mathf.Clamp(currentHp, 0, MaxHp); // Clamp current health within valid range
         UpdateHealthBar(); // Update the health bar display
     }
@@ -144,7 +144,7 @@ public class HealthBar : MonoBehaviour
     /// <param name="newStrength">The new strength value.</param>
     public void SetStrength(int newStrength)
     {
-        strength = Mathf.Clamp(newStrength, 1, 5); // Clamp strength within valid range
+        strength = Mathf.Clamp(newStrength, 1, 2); // Clamp strength within valid range
         UpdateMaxHp(); // Update maximum health based on new strength
         UpdateStrengthBar(); // Update the strength bar display
     }
@@ -154,7 +154,7 @@ public class HealthBar : MonoBehaviour
     /// </summary>
     private void UpdateStrengthBar()
     {
-        StrengthImg.fillAmount = strength / 5f; // Update strength bar fill amount
+        StrengthImg.fillAmount = strength / 2f; // Update strength bar fill amount
 
         if (strength_coroutine != null)
         {

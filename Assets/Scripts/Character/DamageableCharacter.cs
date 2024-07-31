@@ -16,7 +16,7 @@ public class DamageableCharacter : MonoBehaviour
     /// <summary>
     /// Reference to the health bar UI element.
     /// </summary>
-    public HealthBar healthBar;
+    public HealthBarEnemy healthBar;
 
     /// <summary>
     /// Gets or sets the health of the character. Updates the health bar and handles death or irritation events.
@@ -30,6 +30,7 @@ public class DamageableCharacter : MonoBehaviour
             if (healthBar != null)
             {
                 healthBar.SetHp(health);
+                Debug.Log("health is:" + health);
             }
             if (health <= 0)
             {
@@ -82,8 +83,9 @@ public class DamageableCharacter : MonoBehaviour
     /// <param name="knockback">The knockback force to apply to the character.</param>
     public void OnHit(int damage, Vector2 knockback)
     {
+        Debug.Log("damage hit");
         Health -= damage;
-        rb.AddForce(knockback, ForceMode2D.Impulse);
+        rb.AddForce(knockback);
     }
 
     /// <summary>

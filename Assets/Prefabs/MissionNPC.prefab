@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 5949392212648932328}
   - component: {fileID: 1655424842090159881}
   - component: {fileID: 1635084063499198938}
-  - component: {fileID: 3666208984267583655}
-  - component: {fileID: 170745577692604114}
+  - component: {fileID: 3594699690178550188}
   m_Layer: 3
   m_Name: MissionNPC
   m_TagString: MissionNPC
@@ -73,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2011998027
-  m_SortingLayer: 2
+  m_SortingLayerID: 940061997
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e2d2ecc5fbd444804b15d31d1efc7523, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.053894, y: 3.9728088}
   m_EdgeRadius: 0
---- !u!114 &3666208984267583655
+--- !u!114 &3594699690178550188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,30 +140,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 2421973698842587693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c5f05adabcb44dfa3a7204d51a2866, type: 3}
+  m_Script: {fileID: 11500000, guid: 92a35ea4cd86b11489e8257f6b777d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Old Bear
-    sentences:
-    - Hello, young gentleman. Nice to meet you!
-    - 
-    - I'm starving now because there are very few seals in this sea area.
-    - But I am too old to swim northward for a long distance. Can you help me catch
-      some seals?
-    - Thank you Taotao! It's so nice of you!
---- !u!114 &170745577692604114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2421973698842587693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f4e030ae710d764c93292d6f557de2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lines:
-  - Thank you Taotao!
+  initialNpcLines:
+  - hi
+  - im sb
+  initialPlayerLines:
+  - hi
+  - ur sb
+  missionNpcLines:
+  - freak off
+  missionPlayerLines:
+  - sad :(
+  postMissionNpcLines:
+  - nexxxxxxxxt
+  postMissionPlayerLines:
+  - okkkkkkk
+  endMissionNPCLines:
+  - bye
+  endMissionPlayerLines:
+  - bye
+  npcName: Sb
+  playerName: TaoTao
+  isConversation: 1
   isPlayerInRange: 0
+  isMissionOneCompleted: 0
+  isMissionTwoCompleted: 0
+  initialLineSpoken: 0

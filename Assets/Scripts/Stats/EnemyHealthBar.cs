@@ -45,10 +45,6 @@ public class HealthBarEnemy : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(health, 0f, MaxHealth);
         UpdateHp();
-        if (currentHealth <= 0)
-        {
-            // Handle enemy death (e.g., disable or destroy the enemy)
-        }
     }
 
     /// <summary>
